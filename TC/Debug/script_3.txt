@@ -1,0 +1,35 @@
+
+
+main ()
+{
+	local One,x,y,z,q;
+
+	One = array[3][4];
+
+	One[0][0] = "a";
+	One[1][0] = "b";
+	One[2][0] = "c";
+	One[0][1] = "d";
+	One[1][1] = "e";
+	One[2][1] = "f";
+	One[0][2] = "g";
+	One[1][2] = "h";
+	One[2][2] = "i";
+	One[0][3] = "j";
+	One[1][3] = "k";
+	One[2][3] = "l";
+
+
+	for(y=0;y<4;y=y+1) {
+		for (x=0;x<3;x=x+1) {
+			print One[x][y]; print " ";
+			q = One[x][y];
+		}
+		print "\n";
+	}
+	
+
+
+
+	
+}

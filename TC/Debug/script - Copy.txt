@@ -1,0 +1,24 @@
+
+
+
+class CPlayer has Str, Con, Dex, Int, Wiz, Chr;
+
+CPlayer Player with Dex 18;
+
+
+
+
+
+main ()
+{
+	
+	x = 5;
+	print "[x] \n";
+
+	//Player->Dex = 18;
+	
+	print "[Player->Dex]";	
+
+	print " Hello world!";
+	
+}

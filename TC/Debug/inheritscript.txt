@@ -1,0 +1,44 @@
+
+class CFour has FourA, FourB;
+
+class CThree based on CFour has func() { print "hi"; } ;
+
+class CTwo based on CThree has TwoA, TwoB;
+
+class COne based on CTwo has OneA, OneB;
+
+
+class CBlah has blah;
+
+
+
+
+main ()
+{
+	local One, Two;
+
+	One = new COne;
+
+
+	 One->OneA = "OneA";
+	 One->OneB = "OneB";
+	One->TwoA = "TwoA";
+	One->TwoB = "TwoB";
+	One->FourA = "FourA";
+	One->FourB = "FourB";
+
+	Two = new COne;
+	Two->OneA = "Error??";
+
+	print One->OneA; print "\n";
+	print One->OneB; print "\n";
+	print One->TwoA; print "\n";
+	print One->TwoB; print "\n";
+	print One->FourA; print "\n";
+	print One->FourB; print "\n";
+
+//One->blah = "OneA";
+
+//print One->blah;
+	
+}

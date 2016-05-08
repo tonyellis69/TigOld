@@ -1,0 +1,18 @@
+
+
+main ()
+{
+	local One,x;
+
+	One = array[3][4];
+
+	One[1][2] = "one";
+
+
+	print One[1][2]; print "\n";
+	
+
+
+
+	
+}

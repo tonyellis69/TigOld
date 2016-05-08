@@ -1,0 +1,48 @@
+//functions
+
+//functions are defined like this...
+fibonacci ()  //no parameters, no value returned
+{
+	local x=0 , y=1, n, t=0;
+	print "\nThe Fibonacci sequence:";
+
+	print "\n[x]\n[y]";
+	for (n = 0; n < 10; n=n+1)
+	{
+		t = x + y;
+		print "\n[t]";
+
+		x = y; y = t;
+	}	
+}
+
+//...and this (one parameter, n, and a value is rerturned.)
+SquareRoot ( n )
+{
+	local x = 0;
+ 	while (x*x < n) 
+	{
+		x = x + 1;
+	}
+  	if (x*x == n) 
+		return x;
+  	return x - 1;
+}
+
+// Other maths operators include '/' for division, '%' for modulus, '&&' for AND and '||' for OR.
+
+main ()
+{
+	local Num,z, result;
+
+	//calling a function that doesn't return a value:
+	fibonacci();
+
+	//calling a function that does:
+	print ("\nSquare roots:");
+	for (Num = 2;Num < 12;Num=Num+1)
+	{
+		result = SquareRoot(Num*Num);
+		print "\nThe square root of [Num*Num] is [result]";
+	}
+}

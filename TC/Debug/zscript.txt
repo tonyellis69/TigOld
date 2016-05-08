@@ -1,0 +1,15 @@
+main ()
+{
+	local One,x;
+	One = table[2,10];
+
+	print "Size of table columns [One->columns()]";
+
+	print "\n";
+		
+		print " [One[1,x]]"; 
+
+	
+	
+	
+}

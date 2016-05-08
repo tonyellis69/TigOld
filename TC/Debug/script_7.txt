@@ -1,0 +1,28 @@
+
+MyFunc (Param)
+{
+	local FnResult;
+	
+	FnResult = 7;
+
+	print "Function result is [Param]";
+
+}
+
+
+main ()
+{
+	local One, Two, Result, Three;
+
+	Three = 3;
+	Two = 2;
+	One = 1;
+	print "\nOne is [One], Two is [Two] and Three is [Three].";
+	
+	MyFunc(42);
+	
+	//Three = 3;
+	Two = 42;
+	//One = 1;
+	print "\nOne is [One], Two is [Two] and Three is [Three].";
+}

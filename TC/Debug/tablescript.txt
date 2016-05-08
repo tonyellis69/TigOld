@@ -1,0 +1,75 @@
+//Tables
+
+
+main ()
+{
+	local myTable, x,y;
+
+	//Tig also provides tables, which are simply two-dimensional arrays. 
+	//They are created thus:
+
+	myTable = table[3,2]; 
+	
+	//This creates a table of three columns and two rows
+
+	myTable[0,0] = "One";
+	myTable[1,0] = "2";
+	myTable[2,0] = "3.03";
+	myTable[0,1] = "Red";
+	myTable[1,1] = "Green";
+	myTable[2,1] = "Blue";	
+
+	//The built-in table method 'rows' gives the number of rows
+	for (y=0;y < myTable->rows();y=y+1) {
+		for (x=0;x < myTable->columns();x=x+1) { //and 'columns' the number of columns
+			print "[myTable[x,y]] ";
+		}
+		print "\n";
+	}
+
+
+	//Use 'swap_column' to swap columns, and 'swap_row' to swap rows, eg:
+	myTable->swap_row(0,1);
+
+	print "\n\nSwapped rows 0 and 1:\n";
+	for (y=0;y < myTable->rows();y=y+1) {
+		for (x=0;x < myTable->columns();x=x+1) { 
+			print "[myTable[x,y]] ";
+		}
+		print "\n";
+	}
+
+	//Tables are dynamic, so you can add, insert and delete rows and columns at will.
+
+	myTable->add_column("Yellow","four" );
+
+	print "\n\nAdded column:\n";
+	for (y=0;y < myTable->rows();y=y+1) {
+		for (x=0;x < myTable->columns();x=x+1) { 
+			print "[myTable[x,y]] ";
+		}
+		print "\n";
+	}
+
+
+	myTable->insert_row(1,101,102,103,104);
+
+	print "\n\nInserted row at row 1:\n";
+	for (y=0;y < myTable->rows();y=y+1) {
+		for (x=0;x < myTable->columns();x=x+1) { 
+			print "[myTable[x,y]] ";
+		}
+		print "\n";
+	}
+
+	myTable->delete_column(2);
+
+	print "\n\nDeleted column 2:\n";
+	for (y=0;y < myTable->rows();y=y+1) {
+		for (x=0;x < myTable->columns();x=x+1) { 
+			print "[myTable[x,y]] ";
+		}
+		print "\n";
+	}
+
+}

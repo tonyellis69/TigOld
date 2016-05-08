@@ -1,0 +1,16 @@
+class CTest has IntP, FloatP, StrP, ListP, TableP, ObjP;
+
+class CObj has Par1;
+
+CObj MyObj (Par1 66);
+
+
+CTest MyTest (IntP 55, FloatP 0.55, StrP "Aargh!", ListP { 7 ,8,  9}, 
+		TableP [  { "a", "b", "c"}, { "i", "ii", "iii"} ], ObjP MyObj ) ;
+
+main ()
+{
+	print " [MyTest->IntP] [MyTest->FloatP] [MyTest->StrP] [MyTest->ListP[1]] [MyTest->TableP[1,1]] [MyTest->ObjP->Par1]";	  	
+
+	
+}

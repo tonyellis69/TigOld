@@ -1,0 +1,36 @@
+//classes and objects
+
+class Splib has plib;
+
+class FlyObj has ObjNo, test;
+
+class Avian has wings;
+
+class LivingThing based on FlyObj has soul, breath;
+
+
+class Bird based on LivingThing, Avian has Wingspan, WormsEaten, dummy,
+	FlyingStrength() 
+	{
+		print "\nGot here too";
+		return Wingspan + WormsEaten;
+	};
+	
+
+
+main ()
+{
+	local Ostrich, x ;
+	Ostrich = new Bird;
+	Ostrich->test = 42;
+	Ostrich->Wingspan = 5;
+	Ostrich->WormsEaten = 3;
+	Ostrich->ObjNo = 42;
+	print "\nGot here";
+	x = Ostrich->FlyingStrength();
+	print "\nOstrich flying strength is [x]. ObjNo is [Ostrich->ObjNo]\n";
+
+	
+
+
+}

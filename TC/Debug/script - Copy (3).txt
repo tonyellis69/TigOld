@@ -1,0 +1,30 @@
+class CMyclass has func1() {
+	print "\ngot to func.";
+	return;
+	};
+
+CMyclass obj;
+
+main ()
+{
+
+	//Obj = new CMyclass;
+	//obj->func1();
+	
+	
+	One = {0,1}; 
+
+	One->insert(0,"spam","glass",666, 5.5);
+
+//	print "\n";
+
+	for (x=0;x<6;x=x+1)
+	{
+		print One[x]; print "\n";
+	}
+	
+
+
+
+	
+}

@@ -1,0 +1,37 @@
+//Data types
+
+class Test has 
+	TestFunc() {
+			print "...objects! Like this!\n";
+		   };
+
+
+main ()
+{
+	local x;
+
+	print "\n\nTig variables can now store different kinds of data:\n";
+
+	x = 55;
+	print "Integers: [x]\n";
+
+	x = 55.55;
+	print "Floating point numbers: [x]\n";
+
+	x = "...like this!";
+	print "Strings: [x]\n";
+
+	x = new Test;
+	print "And: ";
+	x->TestFunc();	
+
+	print "\nNote that Tig is a 'dynamically typed' language. That is, variables do not\n";
+	print "have a fixed type, such as 'int' or 'float', as they do in a statically-typed\n";
+	print "language such as C++. In C++, x could never be an integer one minute, and a\n";
+	print "string the next, as it is here.\n\n";
+
+	print "Because types and type-incompatibility problems are taken care of behind\n";
+	print "the scenes, Tig is a much simpler language to write in.\n"; 
+
+	
+}

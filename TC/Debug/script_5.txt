@@ -1,0 +1,25 @@
+//Inheritance
+
+class ParentClass has 
+	Function1() {
+			print "\n\tThis is function 1 of the parent class!";
+	},
+	Function2() {
+			print "\n\tThis is function 2 of the parent class!";
+	};
+
+class ChildClass based on ParentClass has 
+	Function2() {
+			print "\n\tThis is function 2 of the child class!";
+	};
+	
+
+
+main ()
+{
+	local Object = new ChildClass;
+	print "\nCalling Function 1 (inherited from the parent class):";
+	Object->Function1();
+	print "\n\nCalling function 2 (overriden by the child class):";
+	Object->Function2();
+}

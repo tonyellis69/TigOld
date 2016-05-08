@@ -1,0 +1,51 @@
+//The superclass operator
+
+//Sometimes when we override a function in a child class, we only want to make a small 
+//addition to what the parent version does. 
+//Rather than repeat all the code of the parent function in the child, we can call the 
+//parent function when we need it, using the Superclass Operator: '::'.
+
+
+class ParentClass has 
+	Function1() 
+	{
+		print "\n\t...this is function 1 of the PARENT class!";
+	},
+	Function2() 
+	{
+		print "\n\tThis is function 2 of the PARENT class!";
+	};
+
+
+class ChildClass based on ParentClass has 
+	Function1() 
+	{	
+		print "\n\tThis is function 1 of the CHILD class!";
+		print "\n\tAnd now, using the superclass operator...";
+
+		//call the parent function
+		::Function1(); 
+
+		print "\n\tAnd now we're back in the child function again!";
+
+	},
+	Function2() 
+	{
+		print "\n\tThis is function 2 of the CHILD class!";
+	};
+
+
+
+main ()
+{
+	local MyObject = new ChildClass; 
+	print "\nMyObject has been created, based on ChildClass.";
+	
+	print "\n\nCalling MyObject function 1...";
+	MyObject->Function1();
+	print "\n\nCalling MyObject function 2...";
+	MyObject->Function2();
+
+	print "\n\nCalling MyObject function 2 again with the superclass operator...";
+	MyObject::Function2();
+}

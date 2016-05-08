@@ -1,0 +1,73 @@
+class Character has str, con, dex, wiz, int, chr, 
+	ChrFunc (x) 
+	{
+		print "Hello [str]  world!";
+
+	},
+	NewFunc (y)
+	{
+		print "this is newfunc!";
+	};
+
+class TestClass has pling, str, plong, plev;
+
+
+testfunc (a ,  b, c)  
+{
+	print "\n Got to function OK.";
+	print "\n Got to function.  a is [a]";
+
+	print "\n b->str is [b->str].";
+
+	if ( a < 0) 
+	{ 
+		print "\n Got to trap.";
+		return 1;
+	}
+//	print "\n Got past trap somehow.";
+
+//return 1;
+
+}
+
+
+main (  )
+{
+ local  a,  p = 87, q,   c = new Character, l, d = 5, e;
+
+
+
+  c->str = 17; //this line leads to the crash!
+
+a = 10;  
+
+ // a = c->str;
+
+
+ // p = 101;
+
+//a = 3;
+
+  e = 100 + 2;
+
+ print "\nGot here. P is [p] and d is [d] and e is [e] and c->str is [c->str] ";
+	
+print "\nGot here, a is [a] while c->str is [c->str]";
+
+print "\nalso got here.";
+
+  //testfunc( a, c,0);
+
+	print "\n Returned from func OK.";
+
+	c->ChrFunc(42);
+
+	print "\n Returned from member func OK.";
+
+ 
+
+}
+
+
+
+

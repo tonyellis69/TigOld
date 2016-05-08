@@ -1,0 +1,25 @@
+class Thing has Wingspan, WormsEaten, 
+	FlyingStrength() 
+	{
+		print "\nGot here too";
+		return 42;
+	};
+
+class Bird based on Thing has 
+	FlyingStrength() 
+	{
+		print "\nGot here too";
+		return Wingspan + WormsEaten;
+	};
+
+
+main() {
+	owl = new Bird(Wingspan 5, WormsEaten 10);
+	print "\n";
+	print owl::FlyingStrength();
+	
+
+}
+
+
+

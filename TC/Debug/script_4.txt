@@ -1,0 +1,37 @@
+//classes and objects
+
+class C1 has x, z, func()
+	{
+		print "\nThis is the original C1 func!";
+		return 5;
+	};
+
+
+class C2 based on C1 has y, func() 
+	{
+		print "\nThis is the later C2 func!";
+		return 42;
+
+	},
+
+	func2()
+	{
+		print "\nThis is func2!";
+		::func();
+		print "\nGet back?";
+		return 3;
+	};
+
+
+main ()
+{
+	local q, x = new C2;
+	
+	q = x->func2();
+	print "\nGet back to main?";
+
+	print "\nFunc says [q]";
+	
+
+
+}

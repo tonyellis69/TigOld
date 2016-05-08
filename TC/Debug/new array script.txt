@@ -1,0 +1,59 @@
+class Character has str, con, dex, wiz, int, chr;
+
+
+main ()
+{
+
+	MyArray = array[10];
+	SubArray = array[4];
+	MiniArray = array[7];
+	MiniArray[5] = 22;
+
+	Fighter = new Character;
+
+
+	print "lol\n";
+
+	MyArray[5] = SubArray;
+
+	MyArray[5][2] = Fighter;
+
+	MyArray[5][2]->str = MiniArray;
+
+	//print " [Fighter->str] ";
+
+	print " [MyArray[5][2]->str[5] ] \n";
+
+
+	MyArray[5][2]->str[5] = "Woot!";
+
+	print " [MyArray[5][2]->str[5] ] ";
+
+
+/*
+	for (x=0;x<10;x=x+1)
+	{
+		One[x] = x;
+	}
+
+	One[1] = "one";
+	One[6] = "six";
+	One[8] = "eight";
+	One[9] = "nine";
+
+	One->insert(3,"spam","glass",666, 5.5);
+
+	print "Size of array [One->size()]";
+
+	print "\n";
+
+	for (x=0;x<14;x=x+1)
+	{
+		print One[x]; print "\n";
+	}
+	
+
+
+*/
+	
+}

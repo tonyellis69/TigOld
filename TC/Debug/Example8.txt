@@ -1,0 +1,25 @@
+//Strings
+
+
+main ()
+{
+	local Name, Colour, FullStr;
+
+	print "\n\nThe 'input' keyword is used to receive text from a user.";
+	print "\nPlease enter your name: ";
+
+	Name = input;
+
+	print "\nThank you [Name]. Now please enter your favourite colour: ";
+
+	Colour = input;
+
+	print "[Colour] eh? Thank you. \n\nTo concatonate strings use the '+' operator, as follows:";
+
+	FullStr = Name + "'s favourite colour is " + Colour + ".\n";
+
+	print "\n";
+
+	print FullStr;
+;
+}

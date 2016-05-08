@@ -1,0 +1,40 @@
+
+
+
+main ()
+{
+	local One,x;
+
+	One = array[10];
+
+
+	for (x=0;x<10;x=x+1)
+	{
+		One[x] = x;
+	}
+
+	One[1] = "one";
+	One[6] = "six";
+	One[8] = "eight";
+	One[9] = "nine";
+
+	One->insert(3,"spam","glass",666, 5.5);
+
+	One->add("blah");
+
+	One->delete(2);
+
+	print "Size of array [One->size()]";
+
+	print "\n";
+
+	for (x=0;x<15;x=x+1)
+	{
+		print One[x]; print "\n";
+	}
+	
+
+
+
+	
+}

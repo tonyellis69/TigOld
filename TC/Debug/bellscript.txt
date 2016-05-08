@@ -1,0 +1,48 @@
+//Random numbers
+
+z = 65537;
+
+DoesNothing() {
+
+	print "\nnothing!\n";
+}
+
+l = 33;
+
+BellCurve = 42;
+
+main ()
+{
+	//local x, r, stars, BellCurve;
+
+	BellCurve = array[19];
+	
+	print "\nGlobal l is [l] \n";
+
+	//Random number generation in Tig borrows a convention from roleplaying games, where dice
+	//throws are represented by a 'd' prefixed by the number of dice thrown and followed by the
+	//number-range of the dice. Thus '2d6' means 'throw two six-sided and add the result together'.
+
+	//In Tig, 2d6 will generate two numbers between one and six and return the sum. To generate
+	//a number between 1 and 100, use '1d100'. For example:
+
+	print "Here's a number between 1 and 100: [1d100].";
+
+	print "\n\nA typical D&D dice throw is 3d6, because it produces numbers that cluster";
+	print "\naround the middle range, while very high and very low numbers are rare, as we";
+	print "\ncan demonstrate:";
+
+	for (x=0;x<100;x=x+1)	{ //roll 3d6 a hundred times
+		r = 3d6;
+		BellCurve[r] = BellCurve[r] + 1;
+	}
+
+
+	for (x=3; x<BellCurve->size();x=x+1) { //chart the distribution
+		print "\n[x]: ";
+		for (stars=0;stars<BellCurve[x];stars=stars+1) {
+			print "*";
+		}
+	}
+
+}
